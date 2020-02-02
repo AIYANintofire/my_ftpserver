@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" width="500px" cellspacing="0">
+
+    <thead>
+        <th>文件名</th>
+        <th>操作</th>
+    </thead>
+    <tbody>
+    {% for file in files %}
+            <tr>
+            <td>{{ file.file }}</td>
+            <td><a href="/down/{{ file.file }}">下载</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="/index/">去上传</a>
+
+</body>
+</html>
